@@ -1,0 +1,11 @@
+[
+  {
+    "id": 1,
+    "title": "Website Design",
+    "description": "Need a modern, responsive design for a corporate website.",
+    "skills": ["HTML", "CSS", "JavaScript"],
+    "budget": "$300-$500",
+    "duration": "3 days",
+    "postedDate": "2024-11-01"
+  }
+]
