@@ -1,66 +1,69 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
-import projectsData from "../data/projects.json"; // Import dummy project data
+import projectsData from "../data/projects.json";
 
-// Define the structure of a project
 export interface Project {
   id: number;
   title: string;
   description: string;
+  timeLeft: string;
+  budget: number;
   skills: string[];
-  budget: string;
-  duration: string;
-  postedDate: string;
+  language: string;
+  type: string;
 }
 
-// Define the structure of the context value
+
+
 interface ProjectContextType {
   projects: Project[];
   filteredProjects: Project[];
   setFilters: (filters: FilterType) => void;
 }
 
-// Define filter types based on your filter requirements
 export interface FilterType {
   search: string;
   skills: string[];
-  budgetRange: string;
+  budgetRange: [number, number] | null;
 }
 
-// Initialize context with an empty value
+
 const ProjectContext = createContext<ProjectContextType | undefined>(undefined);
 
 export const ProjectProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [projects, setProjects] = useState<Project[]>([]);
   const [filteredProjects, setFilteredProjects] = useState<Project[]>([]);
-  const [filters, setFilters] = useState<FilterType>({ search: "", skills: [], budgetRange: "" });
+  const [filters, setFilters] = useState<FilterType>({ search: "", skills: [], budgetRange: null });
 
-  // Load projects data from JSON on initial render
+  // loading projects data from JSON to show user
   useEffect(() => {
+    console.log(projectsData)
     setProjects(projectsData);
-    setFilteredProjects(projectsData); // Initially, all projects are displayed
+    setFilteredProjects(projectsData);
   }, []);
 
-  // Filtering logic to update displayed projects based on filters
   useEffect(() => {
     let filtered = projects;
 
-    // Search filter
+    // search filter
     if (filters.search) {
       filtered = filtered.filter((project) =>
         project.title.toLowerCase().includes(filters.search.toLowerCase())
       );
     }
 
-    // Skill filter
+    // skill filter
     if (filters.skills.length > 0) {
       filtered = filtered.filter((project) =>
         filters.skills.every((skill) => project.skills.includes(skill))
       );
     }
 
-    // Budget filter
+    // budget range filter
     if (filters.budgetRange) {
-      filtered = filtered.filter((project) => project.budget === filters.budgetRange);
+      const [minBudget, maxBudget] = filters.budgetRange;
+      filtered = filtered.filter(
+        (project) => project.budget >= minBudget && project.budget <= maxBudget
+      );
     }
 
     setFilteredProjects(filtered);

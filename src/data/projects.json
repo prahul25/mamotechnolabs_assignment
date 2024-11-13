@@ -1,11 +1,102 @@
 [
   {
     "id": 1,
-    "title": "Website Design",
-    "description": "Need a modern, responsive design for a corporate website.",
-    "skills": ["HTML", "CSS", "JavaScript"],
-    "budget": "$300-$500",
-    "duration": "3 days",
-    "postedDate": "2024-11-01"
+    "title": "E-commerce Website Development",
+    "description": "Build a responsive e-commerce website with a shopping cart and payment gateway integration.",
+    "timeLeft": "3 days",
+    "budget": 15000,
+    "skills": ["HTML", "CSS", "JavaScript", "React", "Node.js"],
+    "language": "English",
+    "type": "Fixed"
+  },
+  {
+    "id": 2,
+    "title": "Mobile App for Food Delivery",
+    "description": "Develop a mobile app for food delivery services with user login, live tracking, and payment options.",
+    "timeLeft": "5 days",
+    "budget": 25000,
+    "skills": ["React Native", "JavaScript", "Firebase"],
+    "language": "English",
+    "type": "Hourly"
+  },
+  {
+    "id": 3,
+    "title": "Company Portfolio Website",
+    "description": "Create a company portfolio website with a blog, contact form, and SEO optimization.",
+    "timeLeft": "1 week",
+    "budget": 10000,
+    "skills": ["HTML", "CSS", "JavaScript", "SEO"],
+    "language": "Spanish",
+    "type": "Fixed"
+  },
+  {
+    "id": 4,
+    "title": "CRM System Customization",
+    "description": "Customize an existing CRM system for better lead management and reporting features.",
+    "timeLeft": "2 weeks",
+    "budget": 30000,
+    "skills": ["PHP", "MySQL", "JavaScript"],
+    "language": "English",
+    "type": "Fixed"
+  },
+  {
+    "id": 5,
+    "title": "Data Analysis Dashboard",
+    "description": "Develop a dashboard for data visualization and analysis using Python and D3.js.",
+    "timeLeft": "4 days",
+    "budget": 20000,
+    "skills": ["Python", "D3.js", "Data Analysis"],
+    "language": "English",
+    "type": "Hourly"
+  },
+  {
+    "id": 6,
+    "title": "Real Estate Website",
+    "description": "Build a real estate listing website with advanced search filters and map integration.",
+    "timeLeft": "6 days",
+    "budget": 18000,
+    "skills": ["HTML", "CSS", "JavaScript", "React", "Google Maps API"],
+    "language": "English",
+    "type": "Fixed"
+  },
+  {
+    "id": 7,
+    "title": "Machine Learning Model Deployment",
+    "description": "Deploy a machine learning model for sentiment analysis on a web platform.",
+    "timeLeft": "10 days",
+    "budget": 25000,
+    "skills": ["Python", "Machine Learning", "Flask"],
+    "language": "English",
+    "type": "Hourly"
+  },
+  {
+    "id": 8,
+    "title": "Personal Finance Tracker App",
+    "description": "Develop a personal finance tracking app with budget management and expense tracking features.",
+    "timeLeft": "1 week",
+    "budget": 12000,
+    "skills": ["React Native", "JavaScript", "SQLite"],
+    "language": "Spanish",
+    "type": "Fixed"
+  },
+  {
+    "id": 9,
+    "title": "Website Redesign for NGO",
+    "description": "Redesign an NGO website with a focus on better UX, donations integration, and accessibility.",
+    "timeLeft": "3 days",
+    "budget": 9000,
+    "skills": ["HTML", "CSS", "JavaScript", "WordPress"],
+    "language": "English",
+    "type": "Fixed"
+  },
+  {
+    "id": 10,
+    "title": "Inventory Management System",
+    "description": "Create an inventory management system with barcode scanning and real-time updates.",
+    "timeLeft": "8 days",
+    "budget": 22000,
+    "skills": ["Java", "Spring Boot", "MySQL"],
+    "language": "English",
+    "type": "Fixed"
   }
 ]
